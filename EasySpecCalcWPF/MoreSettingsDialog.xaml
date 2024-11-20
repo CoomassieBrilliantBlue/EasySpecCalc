@@ -1,0 +1,43 @@
+﻿<hc:Window x:Class="EasySpecCalc.MoreSettingsDialog"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:hc="https://handyorg.github.io/handycontrol"
+           Title="More Settings" Height="600" Width="350"
+           Background="#1c1c1c"
+           WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="MOPAC Program Path" Foreground="White" Margin="5,15,0,5" FontSize="16"/>
+            <StackPanel Orientation="Horizontal" Margin="5,0,0,10">
+                <hc:TextBox x:Name="txtMopacPath" Height="30" Width="265"
+                            hc:InfoElement.Placeholder=""/>
+                <Button x:Name="btnBrowseMopac" Content="Browse..." VerticalAlignment="Top" Height="30" Margin="5,0,0,0" Click="btnBrowseMopac_Click"/>
+            </StackPanel>
+            <TextBlock Text="ORCA Program Path" Foreground="White" Margin="5,10,0,5" FontSize="16"/>
+            <StackPanel Orientation="Horizontal" Margin="5,0,0,10">
+                <hc:TextBox x:Name="txtOrcaPath" Height="30" Width="265"
+                            hc:InfoElement.Placeholder=""/>
+                <Button x:Name="btnBrowseOrca" Content="Browse..." VerticalAlignment="Top" Height="30" Margin="5,0,0,0" Click="btnBrowseOrca_Click"/>
+            </StackPanel>
+            <TextBlock Text="MOPAC Task Parallel Count" Foreground="White" Margin="5,10,0,5" FontSize="16"/>
+            <hc:TextBox x:Name="txtMopacParallel" Height="30" Width="340" Margin="0,0,0,10"
+                        hc:InfoElement.Placeholder=""/>
+            <TextBlock Text="Available Core Count" Foreground="White" Margin="5,10,0,5" FontSize="16"/>
+            <hc:TextBox x:Name="txtCoreCount" Height="30" Width="340" Margin="0,0,0,10"
+                        hc:InfoElement.Placeholder=""/>
+            <TextBlock Text="Available Memory (MB)" Foreground="White" Margin="5,10,0,5" FontSize="16"/>
+            <hc:TextBox x:Name="txtMemory" Height="30" Width="340" Margin="0,0,0,10"
+                        hc:InfoElement.Placeholder=""/>
+            <TextBlock Text="Charge Quantity" Foreground="White" Margin="5,10,0,5" FontSize="16"/>
+            <hc:TextBox x:Name="txtChargeQuantity" Height="30" Width="340" Margin="0,0,0,10"
+                        hc:InfoElement.Placeholder=""/>
+            <StackPanel Orientation="Horizontal" Margin="5,10,5,10">
+                <CheckBox x:Name="chkGroundStateFreq" Content="Ground State Frequency Calculation" Foreground="White" Margin="0,0,20,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5,10,5,10">
+                <CheckBox x:Name="chkExcitedStateFreq" Content="Excited State Frequency Calculation (TDDFT Method)" Foreground="White"/>
+            </StackPanel>
+            <Button x:Name="btnSave" Content="Save" Height="30" Click="btnSave_Click"/>
+        </StackPanel>
+    </Grid>
+</hc:Window>
